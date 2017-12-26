@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load staticfiles %}
+	<title>RVCE placement Portal | SignUp</title>
+	<link rel="stylesheet" href="asset/css/signup.css" />
+	<link rel="stylesheet" href="asset/css/main.css" />
+	<link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<style>
+	body
+	{
+		background-image: url('images/spc.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+</style>
+<body>
+	<header id="header">
+		<h1><a href="firstlook.html">RVCE Placement Portal</a></h1>
+	</header>
+	<br/><br/><br/><br/>
+<div class="signup">
+	<h2>SignUp</h2>
+<form action="spc/web/index.html" style="border:1px solid #ccc">
+  <div class="container">
+    <label><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label><b>SPC_ID</b></label>
+    <input type="text" placeholder="Enter SPC_ID" name="usn" required>
+
+    <label><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+	<div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+</div>
+
+</body>
+</html>

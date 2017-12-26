@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load staticfiles %}
+
+
+                <title>Statistics</title>
+     </head>
+<style>
+body
+{
+  background-image: url('{% static 'tcp/images/200.jpg' %}');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#center
+{
+  text-align: center;
+  margin: 0 auto;
+}
+.ee1
+{
+	display:inline-block;
+}
+.ee2
+{
+	display:inline-block;
+}
+.ee3
+{
+	display:inline-block;
+}
+
+</style>
+      <body>
+        <a href ="firstlook/"> <font color = "red">RVCE Placement Portal</font> </a>
+        <div id="center">
+         <h1>STATISTICS</h1>
+		 <font color = "white"><h2>Total Companies visited till date: {{cnt }}</h2></font>
+         {% for c in placement %}
+          <div class="ee1">
+          <font color = "white"><h3>Name: {{c.cname }}</h3></font>
+          </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <div class="ee2">
+          <font color = "white"><h3>Total Students Recruited: {{ c.total}} </h3></font>
+          </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          {% for p in countt %}
+          	{% if p.cname == c.cname %}
+				<div class="ee3">
+          		<font color = "white"><h3>CTC Offered: {{ p.ctc }} Lakhs</h3></font>
+				</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          	{% endif %}
+          {% endfor %}
+		  <br/>
+        {% endfor %}
+
+</div>
+     </body>
+</html>
